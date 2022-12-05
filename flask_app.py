@@ -85,4 +85,11 @@ def download(id):
         return "No."
 
 if __name__ == "__main__":
+    
+    try:
+        shutil.rmtree("./cache")
+    except FileNotFoundError:
+        pass
+    mkdir("cache")
+
     app.run(host="0.0.0.0")
