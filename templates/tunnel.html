@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/tunnel.css') }}">
+    <title>Tunnel</title>
+</head>
+<body>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+    <h1>Krtinec vyhlouben.</h1>
+
+    <div id="qrcode" class="qrcode"></div>
+
+    <p class="txt">
+    [Klikni na QR kód pro zkopírování]
+    </p>
+
+    <div class="copy">
+        <a href={{dl|safe}}>Stáhnout soubory</a>
+    </div>
+
+    <div class="copy">
+        <a href={{id|safe}}>Zahladit krtinec</a>
+    </div>
+    <p class="footer">
+        ID KRTINCE {{tid}} <br>
+        S HESLEM [dbjasjljkwbb--asuui]
+    </p>
+
+    <script type="text/javascript">
+        new QRCode(document.getElementById("qrcode"), {{id|safe}});
+    </script>
+
+</body>
+</html>

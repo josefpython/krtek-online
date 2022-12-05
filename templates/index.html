@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/index.css') }}">
+    <title>Drop a file</title>
+</head>
+<body>
+    <img src="{{url_for("static", filename="imgs/krtek.png")}}" width="300px"> <br>
+    <h1>Krtek je připraven.</h1>
+    <a href="/new">
+        <div class="novy">
+            Otevřít nový krtinec
+        </div>
+    </a>
+</body>
+</html>

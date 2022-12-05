@@ -1,0 +1,29 @@
+body {
+    background-color: #cec7b4;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    font-family: sans-serif;
+    color: rgb(80, 55, 0);
+}
+
+img {
+    mix-blend-mode: color-burn;
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 75px;
+}
+
+.novy {
+    padding: 10px;
+    font-size: 20px;
+    width: max-content;
+    background-color: rgb(80, 55, 0);
+    border-radius: 5px;
+}
