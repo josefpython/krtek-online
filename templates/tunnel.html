@@ -12,26 +12,30 @@
 
     <h1>Krtinec vyhlouben.</h1>
 
-    <div id="qrcode" class="qrcode"></div>
+    <div onclick="copy()" id="qrcode" class="qrcode"></div>
 
     <p class="txt">
     [Klikni na QR kód pro zkopírování]
     </p>
 
     <div class="copy">
-        <a href={{dl|safe}}>Stáhnout soubory</a>
+        <a href={{dl|safe}} target="_blank">Stáhnout soubory</a>
     </div>
 
     <div class="copy">
-        <a href={{id|safe}}>Zahladit krtinec</a>
+        <a href={{dc|safe}}>Zahladit krtinec</a>
     </div>
     <p class="footer">
-        ID KRTINCE {{tid}} <br>
-        S HESLEM [dbjasjljkwbb--asuui]
+        ID KRTINCE {{tid}}
     </p>
 
     <script type="text/javascript">
         new QRCode(document.getElementById("qrcode"), {{id|safe}});
+
+        function copy() {
+            navigator.clipboard.writeText({{id|safe}})
+        };
+
     </script>
 
 </body>
