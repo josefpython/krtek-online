@@ -7,7 +7,7 @@ from misc import namesystem_random
 
 UPLOAD_FOLDER = "./cache/"
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
-APP_URL = "https://a4c7-31-30-166-249.ngrok.io/"
+APP_URL = "localhost:5000/"
 
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
@@ -66,7 +66,7 @@ def upload_file(id):
             
             return redirect(url_for("success"))
 
-        return render_template("submit.html", id=id)
+        return render_template("new_submit.html", id=id)
     
     else:
         return "Invalid gate id."
