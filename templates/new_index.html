@@ -5657,13 +5657,19 @@
 
 
                                           
-
+                                          {% if not e %}
                                           <div class="comp-ky9wcv1c R6ex7N" id="comp-ky9wcv1c" aria-disabled="false"><a
                                               data-testid="linkElement" href="/new" target="_self"
                                               class="kuTaGy wixui-button zKbzSQ" aria-disabled="false"><span
                                                 class="M3I7Z2 wixui-button__label">Založit tunel</span></a></div>
+                                          {% else %}
 
+                                          <div class="comp-ky9wcv1c R6ex7N" id="comp-ky9wcv1c" aria-disabled="false"><a
+                                            data-testid="linkElement" href="{{krtinec|safe}}" target="_self"
+                                            class="kuTaGy wixui-button zKbzSQ" aria-disabled="false"><span
+                                              class="M3I7Z2 wixui-button__label">Můj tunel</span></a></div>
 
+                                          {% endif %}
 
                                           <div id="comp-kycyn6r2" class="comp-kycyn6r2 wixui-vector-image">
                                             <div data-testid="svgRoot-comp-kycyn6r2"

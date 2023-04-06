@@ -2622,7 +2622,7 @@
 
 </head>
 
-<body class=''>
+<body class='' onload="loaded()">
 
   <pages-css id="pages-css">
     <style id="css_masterPage">
@@ -4427,7 +4427,7 @@
                                           
                                           <!--řř-->
 
-                                          <form>
+                                          <form method=post enctype=multipart/form-data>
                                           
                                             <div style="margin-left: 15vw">
                                               <input type="file" name="file" multiple> <br>
@@ -4577,6 +4577,27 @@
     </div>
   </div>
 
+
+
+<script>
+
+function loaded() {
+
+  let url = new URL(window.location.href);
+  let searchParams = new URLSearchParams(url.search);
+
+  if(searchParams.has("state")) {
+
+    if(searchParams.get("state")==="w") {
+      alert("Soubory se podařilo nahrát!");
+    } else {
+      alert(searchParams.get("state"));
+    }
+  }
+}
+
+
+</script>
 
 
 
